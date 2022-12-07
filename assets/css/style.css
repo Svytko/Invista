@@ -24,7 +24,7 @@ body{
 .container{
     max-width: 1440px;
     margin: 0 auto;
-    gap: 0 20px;
+    padding: 0 20px;
 }
 
 .bg-element{
@@ -52,6 +52,20 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo__link{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 19px;
+    align-items: center;
+}
+
+.logo__name{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 19px;
 }
 
 .header__number{
@@ -123,7 +137,7 @@ body{
 }
 
 .header__img{
-    min-width: 442px;
+    min-width: 455px;
     min-height: 442px;
     background-size: 442px;
     background: url(../img/header-content-img.png);
@@ -133,7 +147,7 @@ body{
 } 
 
 /*SERVICES*/
-
+/* 
 .services__inner{
     text-align: center;
 }
@@ -145,40 +159,228 @@ body{
     padding: 106px 0 50px;
 }
 
-.services__slider-item{
-    max-width: 250px;
-}
-
-.slick-list{
-    overflow: hidden;
-}
-
-.slick-track{
+.services__inner-items{
     display: flex;
-    align-items:flex-start;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    background: var(--dark-blue);
+    border-radius: 20px 20px;
+    position: relative;
 }
 
+.services__item{
+    max-width: 30%;
+}
 
-.services__slider{
+.services__item:nth-child(2n){
     position: absolute;
+    z-index: 2;
+    max-width: 40%;
+    background: var(--light-blue);
+    border-radius: 20px;
+    top: -20px;
+    padding: 0 60px 57px;
 }
-.services__slider .slick-arrow{
-    position: absolute;
-    display: none;
-    font-size: 0;
+
+.services__item-img{
+    width: 61px;
+    padding: 62px 0 20px;
+}
+
+.services__item-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 10px;
+}
+
+.services__item-description{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 48px 57px;
+} */
+
+/*INCOME*/
+
+.income__titile{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    padding: 122px 0 50px;
+}
+
+.income__content{
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--dark-blue);
+    border-radius: 40px;
+    
+}
+
+.income__content-item{
+    max-width: 50%;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.income__content-list{
+    list-style-position: inside; 
+}
+
+.income__list-item{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    padding: 20.5px 0 37px;
+    border-bottom: 1px solid var(--white);
+}
+
+.income__list-item::marker{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.income__list-item:last-child{
+    border-bottom: none;
+}
+
+.income__content-img{
+    width: 500px;
+    height: 481px;
 }
 
 
+/*FOOTER*/
 
+.footer{
+    background: var(--dark-blue);
+}
 
+.footer__inner{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
 
+.footer__inner-copyright,
+.footer__inner-warning,
+.ooter__inner-list-contact
+{
+    max-width: 33%;
+    flex-wrap: wrap;
+}
 
+.foooter__copyright{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
 
+.footer__description{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 15px;
+}
 
+.footer__registration-number,
+.footer__address,
+.foooter__copyright-rules{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 15px;
+}
 
+.footer__registration-number > span,
+.footer__address > span,
+.foooter__copyright-rules > span{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.footer__warning{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 5px;
+}
+
+.footer__warning-description{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.footer__warning-link{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    color: var(--white);
+}
+
+.number__link{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    padding-bottom: 15px;
+    text-align: right;
+}
+
+.email__link{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.email__link > span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding-right: 5px;
+}
+
+.footer__nav-item{
+    list-style-type: none;
+    padding-top: 15px;
+    text-align: right;
+}
+
+.footer__nav-link{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--white);
+}
 
 
 /*MEDIA*/
+
+@media screen and (max-width: 1087px) {
+    
+    /*INCOME*/
+
+    .income__content-img{
+        width: 419.41px;
+        height: 419.41px;
+    }
+
+}
+
 
 @media screen and (max-width: 1000px) {
     /*HEADER*/
@@ -213,7 +415,77 @@ body{
     /*SERVICES*/
 
     
+    /*INCOME*/
 
+    .income__titile{
+        padding: 130px 0 50px;
+    }
+
+    .income__content-item{
+        padding: 30px 20px 20px;
+    }
+
+    .income__list-item{
+        font-size: 16px;
+    line-height: 19px;
+        padding: 24.5px 0 41px;
+    }
+    
+
+    /*FOOTER*/
+    .footer__inner-copyright,
+    .footer__inner-warning{
+        max-width: 45%;
+    }
+
+    .footer__inner-list-contact{
+        max-width: 100%;
+    }
+
+    .number__link,
+    .email__link{
+        display: inline-flex;
+        padding: 20px 15px 0 0;
+    }
+
+    .footer__nav-item{
+        display: inline-block;
+        padding-top: 10px;
+        padding-right: 50px;
+    }
+
+    .footer__nav-item:last-child{
+        padding-right: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 929px){
+    /*INCOME*/
+    .income__content{
+        display: block;
+        justify-content: center;
+    }
+
+    .income__content-item{
+        max-width: 100%;
+    }
+
+    .income__content-item:last-child{
+        text-align: center;
+        padding:0 ;
+    }
+
+    .income__list-item:last-child{
+        padding-bottom: 0px;
+    }
+
+    .income__content-img{
+ 
+        width: 508.42px;
+        height: 508.42px;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -226,19 +498,32 @@ body{
         padding-bottom: 40px;
     }
     
-    .header__img{
-        margin-top: 60px;
-        min-width: 252px;
-        min-height: 247px;
-        background-size: 257px 247px;
-        /* object-fit: cover;*/
-    } 
+    .logo__name{
+        display: none;
+    }
 
     /*SERVICES*/
 
     .services__title{
         padding: 87px 0 30px;
     }
+
+
+    /*INCOME*/
+    .income__titile{
+        padding: 86px 0 50px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .income__content-item{
+        padding: 30px 20px 0;
+    }
+
+    .income__list-item{
+        padding: 34.5px 0 51px;
+    }
+    
 }
 
 @media screen and (max-width: 725px){
@@ -266,7 +551,21 @@ body{
     .logo__big-size{
         display: none;
     }
+
+    /*SERVICES*/
+
+
+    /*INCOME*/
 }
+
+@media screen and (max-width: 610px){
+    /*INCOME*/
+    .income__content-img{
+        width: 300.96px;
+        height: 300.96px;
+    }
+}
+
 
 @media screen and (max-width: 520px){
     /*HEADER*/
@@ -288,6 +587,14 @@ body{
         line-height: 28px; 
         padding: 20px 67px; 
     }
+
+
+    /*SERVICES*/
+
+
+    /*INCOME*/
+
+    
 }
 
 @media screen and (max-width: 440px){
@@ -316,6 +623,34 @@ body{
         font-size: 24px;
         line-height: 28px;
         padding-top: 50px;
+    }
+
+    /*INCOME*/
+
+    .income__titile{
+        padding: 50px 0 30px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+
+    /*FOOTER*/
+
+    .footer__inner{
+        display: inline-block;
+        padding: 20px 0;
+    }
+
+    .footer__inner-copyright,
+    .footer__inner-warning{
+        max-width: 100%;
+    }
+
+    .footer__nav-item{
+        display:block;
+        text-align: left;
+        padding-top: 10px;
+        padding-right: 50px;
     }
 }
 
@@ -362,5 +697,34 @@ body{
     .services__title{
         font-size: 20px;
         line-height: 23px;
+    }
+
+
+    /*INCOME*/
+
+    .income__titile{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+
+    .income__content-img{
+        width: 252.67px;
+        height: 252.67px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    /*FOOTER*/
+    
+    .footer__inner-warning{
+        padding-top: 15px;
+    }
+
+    .number__link,
+    .email__link{
+        display: block;
+        text-align: left;
+        padding-top: 15px;
     }
 }
